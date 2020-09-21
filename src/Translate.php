@@ -24,6 +24,6 @@ class Translate extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'KingHang\\LaravelTranslate\\TranslateService';
+        return TranslateService::class;
     }
 }
