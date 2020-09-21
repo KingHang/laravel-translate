@@ -3,6 +3,7 @@
 
 namespace KingHang\LaravelTranslate;
 
+use Illuminate\Support\Facades\Facade;
 use KingHang\Translate\TranslateService;
 
 /**
@@ -14,13 +15,15 @@ use KingHang\Translate\TranslateService;
  *
  * @see \KingHang\Translate\TranslateService
  */
-class Facade extends \Illuminate\Support\Facades\Facade
+class Translate extends Facade
 {
     /**
-     * {@inheritDoc}
+     * Return the facade accessor.
+     *
+     * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return TranslateService::class;
+        return 'KingHang\\LaravelTranslate\\TranslateService';
     }
 }

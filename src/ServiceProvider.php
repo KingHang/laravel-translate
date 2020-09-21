@@ -30,6 +30,7 @@ class ServiceProvider extends LaravelServiceProvider
         $this->app->singleton(TranslateService::class, function ($app) {
             return new TranslateService(config("translate"));
         });
+        $this->app->alias(TranslateService::class, 'translate');
     }
 
     /**
@@ -60,6 +61,6 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function provides()
     {
-        return [TranslateService::class];
+        return [TranslateService::class, 'translate'];
     }
 }
