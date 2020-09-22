@@ -27,7 +27,7 @@ $ composer require kinghang/laravel-translate
 
 3. 发布配置文件：
  ```shell script
-    php artisan vendor:publish --provider="KingHang\LaravelTranslate\ServiceProvider::class,"
+    php artisan vendor:publish --provider="KingHang\LaravelTranslate\ServiceProvider::class"
 ```
 
 # 使用
